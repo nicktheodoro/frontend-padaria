@@ -1,0 +1,42 @@
+div.container {
+  width: 400px;
+  border: 1px solid #ddd;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+div.produtos {
+  width: 100%;
+  padding: 10px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+div.produtos img {
+  width: 150px;
+}
+
+.btn-details {
+  border: 0;
+  padding: 5px;
+  width: 120px;
+  border: 1px solid crimson;
+  background-color: #fff;
+  color: crimson;
+  margin-top: 5px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.btn-details:hover {
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+}
