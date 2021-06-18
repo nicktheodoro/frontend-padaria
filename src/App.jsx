@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <div>
+      <div className="container-app">
         <Routes />
       </div>
     </div>

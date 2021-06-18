@@ -1,5 +1,5 @@
 div.container {
-  width: 400px;
+  width: 450px;
   border: 1px solid #ddd;
   padding: 15px;
 
@@ -8,15 +8,14 @@ div.container {
   justify-content: center;
   align-items: center;
 
-  margin: 0 auto;
-  margin-top: 10px;
+  margin: 30px auto;
 }
 
-div.container div.produtos + div.produtos {
+div.container div.products + div.products {
   border-top: 1px solid #ddd;
 }
 
-div.produtos {
+div.products {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -33,7 +32,7 @@ div.product-info {
   height: 150px;
 }
 
-div.produtos img {
+div.products img {
   width: 170px;
   border-radius: 5px;
 }

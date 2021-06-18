@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import API from "../../service/api";
-import Produto from "../../model/Produto";
+import API from "../../services/api";
+import Produto from "../../models/Produto";
+import formatForReal from "../../utils/formatMoney";
 
 import "./index.css";
 
@@ -28,23 +29,25 @@ export default class Main extends React.Component {
     return (
       <div className="container">
         {produtos.map((produto) => (
-          <div className="produtos" key={produtos.id}>
+          <div className="products" key={ produto.id }>
             <div className="product-info">
-            <p>
-              <strong>Id:</strong> {produto.id}
-            </p>
-            <p>
-              <strong>Nome:</strong> {produto.nome}
-            </p>
-            <p>
-              <strong>Valor:</strong> {produto.valor}
-            </p>
-            <Link to={`/details/${produto.id}`} className="btn-details">Detalhes</Link>
+              <p>
+                <strong>Id:</strong> {produto.id}
+              </p>
+              <p>
+                <strong>Nome:</strong> {produto.nome}
+              </p>
+              <p>
+                <strong>Valor:</strong> {formatForReal(produto.valor) }
+              </p>
+              <Link to={`/details/${produto.id}`} className="btn-details">
+                Detalhes
+              </Link>
             </div>
             <div className="product-img">
-            <p>
-              <img src={produto.urlImagem} alt="Sonho" />
-            </p>
+              <p>
+                <img src={produto.urlImagem} alt={produto.nome} />
+              </p>
             </div>
           </div>
         ))}
