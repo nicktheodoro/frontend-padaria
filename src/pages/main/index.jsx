@@ -5,6 +5,7 @@ import API from "../../service/api";
 import Produto from "../../model/Produto";
 
 import "./index.css";
+
 export default class Main extends React.Component {
   state = {
     produtos: [],
@@ -15,7 +16,7 @@ export default class Main extends React.Component {
   }
 
   getProducts = async () => {
-    const response = await API.get("/api/produtos");
+    const response = await API.get("/products");
     this.setState({
       produtos: response.data.map((produto) => new Produto(produto)),
     });
@@ -28,6 +29,7 @@ export default class Main extends React.Component {
       <div className="container">
         {produtos.map((produto) => (
           <div className="produtos" key={produtos.id}>
+            <div className="product-info">
             <p>
               <strong>Id:</strong> {produto.id}
             </p>
@@ -37,10 +39,13 @@ export default class Main extends React.Component {
             <p>
               <strong>Valor:</strong> {produto.valor}
             </p>
+            <Link to={`/details/${produto.id}`} className="btn-details">Detalhes</Link>
+            </div>
+            <div className="product-img">
             <p>
               <img src={produto.urlImagem} alt="Sonho" />
             </p>
-            <Link to={`/details/${produto.id}`} className="btn-details">Detalhes</Link>
+            </div>
           </div>
         ))}
       </div>
