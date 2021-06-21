@@ -1,5 +1,5 @@
 import axios from "axios";
 
-const API = axios.create({baseURL: "https://padaria-nicolas.herokuapp.com"});
+const API = axios.create({baseURL: "https://padariaseuzeapi.herokuapp.com"});
 
 export default API;

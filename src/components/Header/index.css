@@ -1,8 +1,24 @@
-nav.header {
-  padding: 25px;
-  text-align: center;
-  color: #fff;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   background-color: crimson;
-  font-size: 2rem;
-  font-weight: 700;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+li a:hover{
+  background-color: rgb(204, 7, 46);
 }

@@ -1,4 +1,28 @@
-div.container {
+div.container-products {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2rem;
+}
+
+.btn-add {
+  width: 100;
+  align-self: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: crimson;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  background-color: rgb(204, 7, 46);
+}
+
+div.container-product {
   width: 450px;
   border: 1px solid #ddd;
   padding: 15px;
@@ -11,7 +35,7 @@ div.container {
   margin: 30px auto;
 }
 
-div.container div.products + div.products {
+div.container-product div.products + div.products {
   border-top: 1px solid #ddd;
 }
 

@@ -1,4 +1,4 @@
-export default class Produto {
+export default class Product {
   
   constructor(obj) {
     obj = obj || {}; // tratamento pra não gerar uma excessão de erro

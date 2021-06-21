@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Produto from "../../models/Produto";
+import Product from "../../models/Product";
 import API from "../../services/api";
 import formatForReal from "../../utils/formatMoney";
 
@@ -15,8 +15,8 @@ export default class Details extends React.Component {
   async componentDidMount() {
     const { id } = this.props.match.params;
 
-    const response = await API.get("products/" + id);
-    this.setState({ produto: new Produto(response.data) });
+    const response = await API.get("/api/produtos/" + id);
+    this.setState({ produto: new Product(response.data) });
   }
 
   render() {
@@ -34,7 +34,7 @@ export default class Details extends React.Component {
           cupiditate magnam vel.
         </p>
         <span>
-        <Link to={"/"} class="btn-back">Voltar</Link>
+        <Link to={"/products"} class="btn-back">Voltar</Link>
         </span>
       </div>
     );
